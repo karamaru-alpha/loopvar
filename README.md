@@ -1,7 +1,7 @@
 ## loopvar
 loopvar is a linter that detects places where loop variables are copied.
 
-cf. [LoopvarExperiment](https://github.com/golang/go/wiki/LoopvarExperiment)
+cf. [Fixing For Loops in Go 1.22](https://go.dev/blog/loopvar-preview)
 
 ## Rquirements
 
