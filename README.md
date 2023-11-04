@@ -3,10 +3,6 @@ loopvar is a linter that detects places where loop variables are copied.
 
 cf. [Fixing For Loops in Go 1.22](https://go.dev/blog/loopvar-preview)
 
-## Rquirements
-
-GO_VERSION >= 1.22 or GOEXPERIMENT=loopvar
-
 ## Example
 ```go
 for i, v := range []int{1, 2, 3} {

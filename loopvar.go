@@ -66,7 +66,7 @@ func checkRangeStmt(pass *analysis.Pass, rangeStmt *ast.RangeStmt) {
 			}
 			pass.Report(analysis.Diagnostic{
 				Pos:     assignStmt.Pos(),
-				Message: fmt.Sprintf(`The loop variable "%s" should not be copied (GO_VERSION >= 1.22 or GOEXPERIMENT=loopvar)`, right.Name),
+				Message: fmt.Sprintf(`The loop variable "%s" should not be copied (Go 1.22~ or Go 1.21 GOEXPERIMENT=loopvar)`, right.Name),
 				SuggestedFixes: []analysis.SuggestedFix{{
 					TextEdits: []analysis.TextEdit{{
 						Pos:     assignStmt.Pos(),
@@ -111,7 +111,7 @@ func checkForStmt(pass *analysis.Pass, forStmt *ast.ForStmt) {
 			}
 			pass.Report(analysis.Diagnostic{
 				Pos:     assignStmt.Pos(),
-				Message: fmt.Sprintf(`The loop variable "%s" should not be copied (GO_VERSION >= 1.22 or GOEXPERIMENT=loopvar)`, right.Name),
+				Message: fmt.Sprintf(`The loop variable "%s" should not be copied (Go 1.22~ or Go 1.21 GOEXPERIMENT=loopvar)`, right.Name),
 				SuggestedFixes: []analysis.SuggestedFix{{
 					TextEdits: []analysis.TextEdit{{
 						Pos:     assignStmt.Pos(),
